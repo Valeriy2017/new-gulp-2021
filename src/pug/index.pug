@@ -1,0 +1,25 @@
+extends layout/app
+
+
+block page
+    include chunk/header
+
+    h1.title Главная
+
+    //- picture 
+        //- source(srcset="img/sm.png", type="image/webp")
+        //- source(srcset="img/desktopwallpapers.org.ua-40073.webp", type="image/webp")
+        //- source(srcset="img/desktopwallpapers.org.ua-40102.webp", type="image/webp")
+        //- source(srcset="img/rose.webp", type="image/webp")
+
+    img(src="img/sm.png", alt="Смайлик", width="250px")
+    img(src="img/desktopwallpapers.org.ua-40073.jpg", alt="Девушка в иве", width="600px")
+    img(src="img/desktopwallpapers.org.ua-40102.jpg", alt="Берюзовое озеро", width="600px")
+    img(src="img/rose.jpg", alt="Розы", width="246px")
+
+
+    ul.news
+        each item in news 
+         li= item.name
+
+    include chunk/footer
